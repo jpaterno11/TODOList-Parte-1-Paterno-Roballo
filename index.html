@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TO-DO LIST</title>
+</head>
+<body>
+    <button id = "cambio-color">
+        <img src="imgs/dark_mode_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg" alt="darkmode">
+        <img src="imgs/light_mode_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg" alt="lightmode">
+    </button>
+    <div id="agregarTask">
+        <label for="tarea">Ingrese la tarea que desea incluir: </label>
+        <input type="text" name="tarea" id="tarea">
+        <button id="addTaskBoton">Agregar</button>
+        <div id="tareas">
+            <h2>Tareas no completadas:</h2>
+            <ul id="tareasDisplay"></ul>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+:root{
+    --bcgr-input: #fff5e1;
+    --text-color: #333;
+    --bcgr-color: linear-gradient(135deg, #ffd6a5, #ff9b85);
+    --bcgr-button: linear-gradient(135deg, #e07a5f, #c94c4c);
+    --hover: linear-gradient(135deg, #f4a261, #e07a5f);
+    --box-shadow-form: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --border-form: 1px solid #e0a96d;
+    --border-input: 2px solid #e07a5f;
+    --border-inpfocus:  #f4a261;
+    --box-shadow-input: 0 0 8px rgba(244, 162, 97, 0.5);
+    --bcgr-form: #ffeedb;
+}
+.darkmode{
+    --bcgr-color: linear-gradient(135deg, #0f0f17, #1c2230, #2b2d42); 
+    --bcgr-form: #232733; 
+    --bcgr-input: #2b2f3b; 
+    --text-color: #EEEEEE; 
+    --placeholder-color: rgba(238, 238, 238, 0.5); 
+    --border-form: 1px solid #3A4750; 
+    --border-input: 2px solid #3A4750; 
+    --border-inpfocus: #008080; 
+    --box-shadow-input: 0 0 6px rgba(0, 128, 128, 0.5); 
+    --bcgr-button: linear-gradient(135deg, #222831, #393E46); 
+    --hover: linear-gradient(135deg, #181c20, #2b2f35); 
+    --box-shadow-form: 0 4px 15px rgba(0, 0, 0, 0.4); 
+}
+
+#cambio-color{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+#cambio-color img:last-child{
+    display: none;
+}
+.darkmode #cambio-color img:first-child{
+    display: none;
+}
+.darkmode #cambio-color img:last-child{
+    display: block;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin-top: 6%;
+    font-family: "Comic Sans MS", sans-serif;
+    background: var(--bcgr-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    gap: 20px;
+    height: 100%;
+    color: var(--text-color);
+}
+
+button {
+    background: var(--bcgr-button);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: var(--box-shadow-form);
+}
+
+button:hover, input:hover {
+    background: var(--hover);
+    transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
