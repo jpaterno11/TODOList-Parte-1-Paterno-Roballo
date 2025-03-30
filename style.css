@@ -61,6 +61,13 @@ body {
     height: 100%;
     color: var(--text-color);
 }
+ul{
+    list-style-type: none;
+    border: solid;
+    border-radius: 15%;
+    padding: 10px;
+    box-shadow: var(--box-shadow-form);
+}
 
 button {
     background: var(--bcgr-button);
@@ -78,7 +85,22 @@ button:hover, input:hover {
     background: var(--hover);
     transform: scale(1.03);
 }
-
+#sectorTareas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+#sectorTareas > div {
+    flex: 1;
+    background: var(--bcgr-form);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-form);
+    text-align: center;
+}
 @media (max-width: 600px) {
     body {
         padding: 20px;
