@@ -1,4 +1,4 @@
-:root{
+:root {
     --bcgr-input: #fff5e1;
     --text-color: #333;
     --bcgr-color: linear-gradient(135deg, #ffd6a5, #ff9b85);
@@ -11,7 +11,8 @@
     --box-shadow-input: 0 0 8px rgba(244, 162, 97, 0.5);
     --bcgr-form: #ffeedb;
 }
-.darkmode{
+
+.darkmode {
     --bcgr-color: linear-gradient(135deg, #0f0f17, #1c2230, #2b2d42); 
     --bcgr-form: #232733; 
     --bcgr-input: #2b2f3b; 
@@ -26,7 +27,7 @@
     --box-shadow-form: 0 4px 15px rgba(0, 0, 0, 0.4); 
 }
 
-#cambio-color{
+#cambio-color {
     height: 50px;
     width: 50px;
     padding: 0;
@@ -38,18 +39,23 @@
     top: 20px;
     right: 20px;
 }
-#cambio-color img:last-child{
+
+#cambio-color img:last-child {
     display: none;
 }
-.darkmode #cambio-color img:first-child{
+
+.darkmode #cambio-color img:first-child {
     display: none;
 }
-.darkmode #cambio-color img:last-child{
+
+.darkmode #cambio-color img:last-child {
     display: block;
 }
+
 html, body {
     height: 100%;
 }
+
 body {
     margin-top: 6%;
     font-family: "Comic Sans MS", sans-serif;
@@ -60,8 +66,10 @@ body {
     gap: 20px;
     height: 100%;
     color: var(--text-color);
+    padding: 10px;
 }
-ul{
+
+ul {
     list-style-type: none;
     border: solid;
     border-radius: 15%;
@@ -85,28 +93,66 @@ button:hover, input:hover {
     background: var(--hover);
     transform: scale(1.03);
 }
-#sectorTareas{
+
+#sectorTareas {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 90%;
-    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
     gap: 20px;
 }
+
 #sectorTareas > div {
-    flex: 1;
+    flex: 1 1 30%;
     background: var(--bcgr-form);
     padding: 20px;
     border-radius: 10px;
     box-shadow: var(--box-shadow-form);
     text-align: center;
 }
+
+#agregarTask input {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: var(--border-input);
+}
+
+@media (max-width: 800px) {
+    #sectorTareas {
+        flex-direction: column;
+    }
+
+    #sectorTareas > div {
+        flex: 1 1 100%;
+    }
+}
+
 @media (max-width: 600px) {
     body {
         padding: 20px;
     }
 
-    form {
-        width: 100%;
+    #sectorTareas {
+        padding: 10px; 
+    }
+
+    #cambio-color {
+        top: 10px;
+        right: 10px;
+    }
+
+    #agregarTask input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    ul {
+        padding: 5px;
     }
 }
+
