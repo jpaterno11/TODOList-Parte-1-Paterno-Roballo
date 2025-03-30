@@ -69,7 +69,7 @@ body {
     font-family: "Comic Sans MS", sans-serif;
     background: var(--bcgr-color);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     gap: 20px;
     height: 100%;
@@ -174,4 +174,28 @@ ul li:hover {
         flex: 1 1 100%;
         margin-bottom: 20px;
     }
+}
+
+@keyframes stretchBounce {
+    0% {
+        transform: scaleX(0.6);
+        opacity: 0;
+    }
+    60% {
+        transform: scaleX(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+#agregarTask, #mostrarIncompletas, #mostrarTerminadas {
+    animation: stretchBounce 0.8s ease-out;
+}
+
+#agregarTask:hover, #mostrarIncompletas:hover, #mostrarTerminadas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
