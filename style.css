@@ -175,6 +175,60 @@ ul li:hover {
         margin-bottom: 20px;
     }
 }
+@media (max-width: 1024px) {
+    #sectorTareas {
+        flex-direction: column;
+        gap: 10px;
+        overflow-x: auto;
+    }
+    #sectorTareas > div {
+        flex: 1 1 100%;
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    #sectorTareas > div {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    #sectorTareas {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #sectorTareas > div {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    #cambio-color {
+        top: 10px;
+        right: 10px;
+        height: 40px;
+        width: 40px;
+    }
+    #cambio-color img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    ul {
+        padding: 5px;
+        border-radius: 10px;
+    }
+    input {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
 
 @keyframes stretchBounce {
     0% {
